@@ -1,0 +1,169 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>{{ post.title }} - Riders Fly Arena</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/jquery.dropotron.min.js" %}"></script>
+		<script src="{% static "js/skel.min.js" %}"></script>
+		<script src="{% static "js/skel-layers.min.js" %}"></script>
+		<script src="{% static "js/initb.js" %}"></script>
+		<noscript>
+			<link rel="stylesheet" href="{% static "css/skel.css" %}" />
+			<link rel="stylesheet" href="{% static "css/style.css" %}" />
+			<link rel="stylesheet" href="{% static "css/style-desktop.css" %}" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="{% static "stylesheet" href="css/ie/v8.css" %}" /><![endif]-->
+		<!--[if lte IE 9]><link rel="{% static "stylesheet" href="css/ie/v9.css" %}" /><![endif]-->
+	</head>
+	<body class="no-sidebar">
+
+		<!-- Header Wrapper -->
+			<div id="header-wrapper">
+				<div class="container">
+
+					<!-- Header -->
+						<header id="header">
+							<div class="inner">
+
+								<!-- Logo -->
+									<h1><a href="/" id="logo">Riders Fly Arena</a></h1>
+
+								<!-- Nav -->
+								<nav id="nav">
+									<ul>
+										<li><a href="/">Inicio</a></li>
+										<li><a href="/eventos/">Eventos</a></li>
+										<li>
+											<a>Riders</a>
+											<ul>
+												<li><a href="/riders/fmx/">FMX</a></li>
+												<li><a href="/riders/bmx/">BMX</a></li>
+											</ul>
+										</li>
+										<li><a href="/contacto/">Contacto</a></li>
+									</ul>
+								</nav>
+
+							</div>
+						</header>
+
+				</div>
+			</div>
+
+		<!-- Main Wrapper -->
+			<div id="main-wrapper">
+				
+				<div class="wrapper style3">
+					<div class="inner">
+						<div class="container">
+							<div class="row">
+								<div class="8u">
+
+								<a href="#" class="image left"><img src="{{ post.image.url}}" alt="{{ post.title }}" /></a>
+								<header>
+									<h3>{{ post.title }}</h3>
+									<p>{{ post.date }}</p>
+								</header>
+
+								<section>
+									{% autoescape on %}
+									{{ post.content |linebreaks }}
+									{% endautoescape %}
+								</section>
+									
+								</div>
+								<div class="4u">
+
+								{% for image in post.images.all %}
+								<a href="{{ image.img.url }}" class="image listed"><img src="{{ image.img.url}}" alt="{{ image.name }}" /></a>
+                  				{% empty %}
+                    			<div>No hay post todavía</div>
+								{% endfor %}
+
+								</div>
+							</div>
+							<div id="disqus_thread"></div>
+								<script type="text/javascript">
+								    /* * * CONFIGURATION VARIABLES * * */
+								    var disqus_shortname = 'ridersflyarena';
+    
+								    /* * * DON'T EDIT BELOW THIS LINE * * */
+								    (function() {
+								        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+								        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+								        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+								    })();
+								</script>
+								<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Footer Wrapper -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							<div class="3u">
+
+								<!-- Links -->
+									<section>
+										<h2>Links de interés</h2>
+										<ul class="divided">
+											{% for link in links %}
+											<li><a href="{{ link.link }}">{{ link.title }}FEO</a></li>
+											{% endfor %}
+										</ul>
+									</section>
+
+							</div>
+
+							<div class="6u">
+
+								<!-- About -->
+									<section>
+										<h2><strong>Riders Fly Arena</strong></h2>
+										<p>Hola, somos <strong>Riders Fly Arena</strong>, organizadores de los mejores eventos de Freestyle de la peninsula.
+										Contamos con los mejores Riders del panorama nacional. Si buscas espectaculo, somos lo que estás buscando.</p>
+										<a href="/contacto/" class="button alt icon fa-arrow-circle-right">Contacto</a>
+									</section>
+
+								<!-- Contact -->
+									<section>
+										<h2>Ponte en contacto</h2>
+										<div>
+											<div class="row">
+												<div class="6u">
+													<dl class="contact">
+														{% for contact in contacts %}
+														<dt>{{ contact.name }}</dt>
+														<dd><a href="{{ contact.data }}">{{ contact.data }}</a></dd>
+														{% endfor %}
+													</dl>
+												</div>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="12u">
+								<div id="copyright">
+									<ul class="menu">
+										<li>Developed by: <a href="http://worllhmar.info">@Worllhmar</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+		</body>
+	</html>
