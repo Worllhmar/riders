@@ -8,7 +8,7 @@ from django.http import HttpResponse
 def events_list(request):
 
     #events = get_list_or_404(Event.objects.order_by('-dateTime'))
-    events = Event.objects.all
+    events = Event.objects.all().order_by('-dateTime')
     links = Link.objects.all
     contacts = Contact.objects.all
 
