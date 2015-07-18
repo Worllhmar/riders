@@ -827,12 +827,12 @@
 			border: solid 1px rgba(255,255,255,0.25);
 			border-left: 0;
 			border-right: 0;
-			color: orange;
-			color: rgba(255,153,0,0.75);
+			color: #fff;
+			color: rgba(255,255,255,0.75);
 			font-size: 2.35em;
 			font-weight: 700;
 			line-height: 1.3em;
-			margin: 0 0 0 0;
+			margin: 0 0 1em 0;
 		}
 
 			#banner h2 strong
@@ -861,15 +861,6 @@
 				margin: 1.25em 0 10px 0;
 			}
 
-			#banner h2 .blue
-			{
-				color: #2a5ca0;
-			}
-
-			#banner h2 .white
-			{
-				color: #ffffff;
-			}
 
 		#banner p
 		{
