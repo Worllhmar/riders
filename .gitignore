@@ -6,3 +6,8 @@ local_settings.py
 django_project/django_project/settings.py
 django_project/django_project/settings.pyc
 django_project/django_project/settings.pye
+.profile
+.bashrc
+.bash_logout
+.bash_history
+./cache
