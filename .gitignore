@@ -10,4 +10,4 @@ django_project/django_project/settings.pye
 .bashrc
 .bash_logout
 .bash_history
-./cache
+.cache
