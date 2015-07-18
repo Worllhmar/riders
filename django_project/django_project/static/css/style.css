@@ -882,6 +882,7 @@
 		background: url('../images/header.jpg');
 		background-position: top left, bottom center;
 		background-size: auto, cover;
+		background-repeat: no-repeat;
 		padding: 0;
 	}
 
