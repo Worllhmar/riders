@@ -14,7 +14,7 @@
 
 	body
 	{
-		background: #303238 url('images/bg01.png');
+		background: #303238 url('images/bg02.png');
 	}
 
 		body.is-loading *
@@ -439,7 +439,7 @@
 				}
 
 			.image.left
-			{	
+			{
 				display: inline-block;
 				margin: 0 2em 2em 0;
 			}
@@ -1031,7 +1031,7 @@
 /*********************************************************************************/
 /* User                                                                          */
 /*********************************************************************************/
-#logo 
+#logo
 {
 	color: orange;
 }
@@ -1044,7 +1044,7 @@ nav#nav {
 text-shadow: 2px -2px 1px #000;
 }
 
-#post 
+#post
 {
 	margin: 0;
 	display: inline-block;
