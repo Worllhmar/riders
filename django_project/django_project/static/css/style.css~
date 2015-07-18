@@ -888,7 +888,7 @@
 
 	#header-wrapper
 	{
-		background: url('images/bg01.png'), url('../images/tomellosofmxbanner.png');
+		background: url('images/bg01.png'), url('../images/header.jpg');
 		background-position: top left, bottom center;
 		background-size: auto, cover;
 		padding: 0;
